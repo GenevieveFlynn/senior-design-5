@@ -4,7 +4,7 @@
 2. [What is Ethereum](https://ethereum.org/en/what-is-ethereum/)
 3. [Etherscan](https://docs.ethhub.io/guides/deciphering-a-transaction-on-etherscan/)
 4. [What are Smart Contracts](https://ethereum.org/en/developers/docs/smart-contracts/)
-5. [What are Dapps](https://ethereum.org/en/dapps/)
+5. [What are Dapps + List of Current Dapps](https://ethereum.org/en/dapps/)
 6. [101: Smart Contracts and Dapps](https://auth0.com/blog/101-smart-contracts-and-decentralized-apps-in-ethereum/)
 7. [What are Smart Contracts - For Beginners](https://medium.com/coreledger/what-are-smart-contracts-a-breakdown-for-beginners-92ac68ebdbeb)
 8. [The Vending Machine Model](https://medium.com/starkware/the-vending-machine-model-6d724df9cf08)
