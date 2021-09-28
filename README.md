@@ -1,2 +1,2 @@
-# senior-design-5
-Repository for our senior design team
+# Senior Design Team 5
+Repository for Senior Design Team 5
