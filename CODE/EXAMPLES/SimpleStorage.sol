@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: GPL-3.0
 
 // From https://docs.soliditylang.org/en/v0.8.8/introduction-to-smart-contracts.html
 // A Simple Smart Contract

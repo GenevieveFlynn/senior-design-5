@@ -45,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Users/katiebramlett/Documents/CSCI 4243W/Code/Solidity-SmartContract-Test.sol": "SimpleStorage"
+			"Users/katiebramlett/Documents/CSCI4243W/Code/senior-design-5/CODE/EXAMPLES/SimpleStorage.sol": "SimpleStorage"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -59,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"Users/katiebramlett/Documents/CSCI 4243W/Code/Solidity-SmartContract-Test.sol": {
-			"keccak256": "0xafc096c7f5798ef54e9d14ac20c95a668a746f46c8c5b3ab45c473a47f880916",
-			"license": "UNLICENSED",
+		"Users/katiebramlett/Documents/CSCI4243W/Code/senior-design-5/CODE/EXAMPLES/SimpleStorage.sol": {
+			"keccak256": "0x14917890479bdaa0c77016a9d79deb17b69afd3f72e92e0c774003fa254e064b",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://d2c68be1a37586700b32495bcf00fb77af833c8631732611af37d4f9def93df6",
-				"dweb:/ipfs/Qmf5nr2sjY1xBBptW2E3miT71w2ywJnp5PvUifDB2Ysty3"
+				"bzz-raw://67dbd54540c7ba37dd4afde77e6d7a3662235f05556c71d640559af0aea75169",
+				"dweb:/ipfs/QmTjh2bhPc7z1663Fm1cD5UtbuNySfntvVHmQvvzdMBzdM"
 			]
 		}
 	},
