@@ -2,7 +2,12 @@
 
 ## Prerequisites 
 
-Make sure you have node.js installed (run node -v)
+Make sure you have node.js installed and react.
+
+```
+    node -v 
+    npm install create-react-app
+```
 
 ## Truffle 
 
@@ -36,6 +41,8 @@ Before deploying the contract you need to have ganache-cli running in the backgr
 ganache-cli
 ```
 
+Running these commands created the following directory structure: 
+
 ## Contract deployment 
 
 To deploy the contracts, in one terminal:
@@ -56,6 +63,3 @@ npm run start
 This should automatically open the web browser where it is being locally deployed. If you have metamask, open localhost in incognitio so as not to confuse the networks. 
 
 If you want to run with Metamask you need to import the wallets ([tutorial here](https://www.youtube.com/watch?v=jaTnIeWjAg0))
-
-## Directory Structure 
-
