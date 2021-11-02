@@ -2,7 +2,8 @@
 
 ## Prerequisites 
 
-Make sure you have node.js installed and react.
+Make sure you have node.js installed and react.<br>
+(Node.js download found here: [https://nodejs.org/en/](https://nodejs.org/en/))
 
 ```
     node -v 
