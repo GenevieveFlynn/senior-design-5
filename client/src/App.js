@@ -5,7 +5,7 @@ import getWeb3 from "./getWeb3";
 import "./App.css";
 
 class App extends Component {
-  state = { storageValue: 0, web3: null, accounts: null, contract: null };
+  state = { storageValue: 0, web3: null, accounts: null, contract: null, balances: null };
 
   componentDidMount = async () => {
     try {
@@ -25,7 +25,7 @@ class App extends Component {
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance }, this.runExample);
+      this.setState({ web3, accounts, contract: instance, balances: new Array(10)}, this.runExample);
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -38,22 +38,11 @@ class App extends Component {
   runExample = async () => {
     const { accounts, contract } = this.state;
 
-    // Fixed this boilerplate from: https://ethereum.stackexchange.com/questions/70864/truffle-unbox-react-front-end-is-unable-to-read-set-state-of-the-contract
-
-    // This was changed from 
-    // await contract.methods.set(5).send({ from: accounts[0] });
-    contract.methods.set(51).send({ from: accounts[0] }).then((error, tranasctionHash)=>{alert(tranasctionHash);});
-    // could also do this:
-    // contract.methods.set(51).send({ from: accounts[0] }, (error, tranasctionHash)=>{alert(tranasctionHash);});
-
-
-    // Get the value from the contract to prove it worked.
-    // change from 
+    // 1,000,000,000,000,000,000 Wei = 1 ETH 1 * 10^18 
+    contract.methods.send(accounts[1]).send({ from: accounts[0], value: 1000000000000000000 });
+    
     const response = await contract.methods.get().call();
 
-    // Update state with the result.
-    // this.setState({ storageValue: response });
-    // need to convert from Solidity BigNumber to normal number
     this.setState({ storageValue:this.state.web3.utils.hexToNumber(this.state.web3.utils.toHex(response))});
 
   };
@@ -64,17 +53,9 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <h1>Good to Go!</h1>
-        <p>Your Truffle Box is installed and ready.</p>
         <h2>Smart Contract Example</h2>
-        <p>
-          If your contracts compiled and migrated successfully, below will show
-          a stored value of 5 (by default).
-        </p>
-        <p>
-          Try changing the value stored on <strong>line 42</strong> of App.js.
-        </p>
-        <div>The stored value is: {this.state.storageValue}</div>
+        <div>Account 0: {this.state.accounts[0]} </div>
+        <div>Account 1: {this.state.accounts[1]} </div>
       </div>
     );
   }
