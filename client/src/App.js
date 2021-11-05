@@ -38,6 +38,7 @@ class App extends Component {
   runExample = async () => {
     const { accounts, contract } = this.state;
 
+    // Send money from one account to another account (transaction of money)
     // 1,000,000,000,000,000,000 Wei = 1 ETH 1 * 10^18 
     contract.methods.send_money(accounts[1]).send({from: accounts[0], value: 1000000000000000000 }).then((error, tranasctionHash)=>{alert(tranasctionHash);});
     
@@ -46,6 +47,7 @@ class App extends Component {
 
   };
 
+  // Front end website
   render() {
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
