@@ -16,7 +16,7 @@ contract SimpleStorage {
     return address(this).balance;
   }
         
-  function send(address payable _To )public payable returns (bool) {
+  function send_money(address payable _To) public payable returns (bool) {
     _To.transfer(msg.value);
     return true;
   }

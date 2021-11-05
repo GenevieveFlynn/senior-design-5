@@ -39,11 +39,10 @@ class App extends Component {
     const { accounts, contract } = this.state;
 
     // 1,000,000,000,000,000,000 Wei = 1 ETH 1 * 10^18 
-    contract.methods.send(accounts[1]).send({ from: accounts[0], value: 1000000000000000000 });
+    contract.methods.send_money(accounts[1]).send({from: accounts[0], value: 1000000000000000000 }).then((error, tranasctionHash)=>{alert(tranasctionHash);});
     
-    const response = await contract.methods.get().call();
-
-    this.setState({ storageValue:this.state.web3.utils.hexToNumber(this.state.web3.utils.toHex(response))});
+    //const response = await contract.methods.get().call();
+    //this.setState({ storageValue:this.state.web3.utils.hexToNumber(this.state.web3.utils.toHex(response))});
 
   };
 
