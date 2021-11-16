@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SimpleStorageContract from "./contracts/SimpleStorage.json";
 import getWeb3 from "./getWeb3";
+import Header from './components/Header'
 
 import "./App.css";
 
@@ -54,6 +55,7 @@ class App extends Component {
     }
     return (
       <div className="App">
+        <Header></Header>
         <h2>Smart Contract Example</h2>
         <div>Account 0: {this.state.accounts[0]} </div>
         <div>Account 1: {this.state.accounts[1]} </div>
