@@ -21,11 +21,6 @@ li, a, button {
     text-decoration: none;
 }
 
-.container {
-    width: 100%;
-    margin: 0 auto;
-    height: 40px;
-}
 
 /* header is technically our container*/
 header {
@@ -34,21 +29,23 @@ header {
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
-    padding: 10px 10%;
+    padding: 0px 5%;
+    height: 100px;
 }
 
 
 h1 {
     color: var(--blue);
     font-size: 25px;
-    font-weight: 900;
+    font-weight: 1000;
     letter-spacing: 2px;
     font-family: 'Lato', sans-serif;
     font-style: normal;
+    margin-top: 30px;
 }
 
 nav {
-    position: relative;
+    position:relative;
     z-index: 99;
     padding: 16px 16px;
 }
@@ -108,15 +105,15 @@ nav {
 }
 
 nav ul {
-    margin: 0;
-    padding: 0;
+    margin: 2;
+    padding: 5;
     list-style: none;
 }
 
 nav li {
     display: inline-block; 
-    padding: 00px 40px;
-    font-size: 20px;
+    padding: 00px 60px;
+    font-size: 22px;
 }
 
 nav i {
@@ -150,9 +147,17 @@ nav a:hover {
     
 }
 
-/* Add button if wanted
 
-button {
+.login {
     padding: 9px 25px;
+    font-size: 20px;
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--blue);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 30px;
 }
-*/
+

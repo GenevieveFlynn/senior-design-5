@@ -32,8 +32,10 @@ class Header extends Component {
               <i className="fa fa-bell fa-lg" aria-hidden="true"><a href="#"></a></i>
               <i className="fa fa-cog fa-lg" aria-hidden="true"><a href="#"></a></i>
               <i className="fa fa-user-circle-o fa-2x" aria-hidden="true"><a href="#"></a></i>
+              <button className="login">Login</button>
             </ul>
           </nav>
+
           <button onClick={this.handleClickfa} className={this.state.isToggle ? "hamburger" : "hamburger in-action"}>
             <span></span>
             <span></span>
