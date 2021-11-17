@@ -24,13 +24,19 @@ class Header extends Component {
           <h1>On the Block</h1>
           <nav>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">My Contracts</a></li>
-              <li><a href="#">History</a></li>
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">MY CONTRACTS</a></li>
+              <li><a href="#">HISTORY</a></li>
             </ul>
           </nav>
-
-          <button onClick={this.handleClick} className={this.state.isButtonActive ? 'hamburger is-active' : "hamburger"}>
+          <nav className="left-nav">
+            <ul>
+              <i className="fa fa-bell fa-lg" aria-hidden="true"><a href="#"></a></i>
+              <i className="fa fa-cog fa-lg" aria-hidden="true"><a href="#"></a></i>
+              <i className="fa fa-user-circle-o fa-2x" aria-hidden="true"><a href="#"></a></i>
+            </ul>
+          </nav>
+          <button onClick={this.handleClickfa} className={this.state.isButtonActive ? 'hamburger is-active' : "hamburger"}>
             <span></span>
             <span></span>
             <span></span>

@@ -5,75 +5,62 @@
 
 /* this can be used for fonts or icons */
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@500&display=swap');
 
 :root {
-    --blue: #A4C3FF;
+    --blue: #00c3ffbb;
     --darkgray: rgba(5, 5, 5, 0.85);
     --white: #FFFFFF;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Set fonts here */
+li, a, button {
+    font-family: 'Montserrat', sans-serif;;
+    font-weight: 500;
+    text-decoration: none;
 }
 
 .container {
     width: 100%;
     margin: 0 auto;
-    height: 55px;
+    height: 40px;
 }
 
 /* header is technically our container*/
 header {
     background: var(--darkgray);
     display: flex;
+    flex-direction: row;
+    align-items: stretch;
     justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
+    padding: 10px 10%;
 }
 
-header::after {
-    content: '';
-    display: table; 
-    clear: both;
-}
-
-/* once a logo is added
-.logo {
-    float: left; 
-    padding: 10px 0;
-}
-/*
-
-/* Set fonts here */
-li, a, button {
-    font-family: Mulish;
-    font-style: normal;
-    font-weight: 500;
-    text-decoration: none;
-}
 
 h1 {
     color: var(--blue);
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 25px;
+    font-weight: 900;
     letter-spacing: 2px;
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     font-style: normal;
 }
 
 nav {
     position: relative;
     z-index: 99;
-    padding: 16px 32px;
+    padding: 16px 16px;
+}
+
+.left-nav {
+    color: var(--blue);
 }
 
 .hamburger {
     display: block;
     position: relative;
     z-index: 1;
-
     user-select: none;
     appearance: none;
     border: none;
@@ -116,9 +103,8 @@ nav {
     transform: translate(-3px, 3px) rotate(-45deg);
 }
 
-
-.menu {
-    display: none;
+.hamburger.is-active:hover span {
+    background-color: var(--blue);
 }
 
 nav ul {
@@ -129,7 +115,13 @@ nav ul {
 
 nav li {
     display: inline-block; 
-    padding: 00px 20px;
+    padding: 00px 40px;
+    font-size: 20px;
+}
+
+nav i {
+    padding: 00px 10px;
+    cursor: pointer;
 }
 
 nav a {
@@ -142,7 +134,16 @@ nav a:hover {
     transition: all 0.3s ease 0s;
 }
 
+/* make hamburger disappear after certain size */
 
+@media (min-width: 750px) {
+    .hamburger {
+        display: none;
+    }
+    .nav {
+        display: inline-block;
+    }
+}
 
 /* Add button if wanted
 
