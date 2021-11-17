@@ -9,8 +9,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@500&display=swap');
 
 :root {
-    --blue: #00c3ffbb;
-    --darkgray: rgba(5, 5, 5, 0.85);
+    --blue: #00c3ff;
+    --darkgray: rgba(5, 5, 5, 0.897);
     --white: #FFFFFF;
 }
 
@@ -136,13 +136,18 @@ nav a:hover {
 
 /* make hamburger disappear after certain size */
 
-@media (min-width: 750px) {
+@media (min-width: 1100px) {
     .hamburger {
         display: none;
     }
-    .nav {
-        display: inline-block;
+
+}
+
+@media (max-width: 1100px) {
+    nav {
+        display: none;
     }
+    
 }
 
 /* Add button if wanted

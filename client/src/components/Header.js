@@ -13,9 +13,7 @@ class Header extends Component {
   }
 
   handleClick() {
-    this.setState({
-      isButtonActive: !this.state.isButtonActive
-    })
+    this.setState({isToggle: !this.state.isToggle});
   }
 
   render() {
@@ -24,9 +22,9 @@ class Header extends Component {
           <h1>On the Block</h1>
           <nav>
             <ul>
-              <li><a href="#">HOME</a></li>
-              <li><a href="#">MY CONTRACTS</a></li>
-              <li><a href="#">HISTORY</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">My Contracts</a></li>
+              <li><a href="#">History</a></li>
             </ul>
           </nav>
           <nav className="left-nav">
@@ -36,7 +34,7 @@ class Header extends Component {
               <i className="fa fa-user-circle-o fa-2x" aria-hidden="true"><a href="#"></a></i>
             </ul>
           </nav>
-          <button onClick={this.handleClickfa} className={this.state.isButtonActive ? 'hamburger is-active' : "hamburger"}>
+          <button onClick={this.handleClickfa} className={this.state.isToggle ? "hamburger" : "hamburger in-action"}>
             <span></span>
             <span></span>
             <span></span>

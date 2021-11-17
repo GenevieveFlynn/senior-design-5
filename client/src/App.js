@@ -56,6 +56,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header></Header>
+        <h1>Insert rest of app</h1>
       </div>
     );
   }
