@@ -1,0 +1,152 @@
+/* 
+    Custom styling for my header file 
+    Created using Figma 
+*/
+
+/* this can be used for fonts or icons */
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
+:root {
+    --blue: #A4C3FF;
+    --darkgray: rgba(5, 5, 5, 0.85);
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    height: 55px;
+}
+
+/* header is technically our container*/
+header {
+    background: var(--darkgray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+header::after {
+    content: '';
+    display: table; 
+    clear: both;
+}
+
+/* once a logo is added
+.logo {
+    float: left; 
+    padding: 10px 0;
+}
+/*
+
+/* Set fonts here */
+li, a, button {
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+h1 {
+    color: var(--blue);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-family: Lato;
+    font-style: normal;
+}
+
+nav {
+    position: relative;
+    z-index: 99;
+    padding: 16px 32px;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background-color: var(--white);
+    border-radius: 6px;
+    z-index: 1;
+
+    transform-origin: 0 0;
+
+    transition: 0.4s;
+}
+
+.hamburger:hover span:nth-child(2) {
+    transform: translateX(10px);
+    background-color: var(--blue);
+}
+
+.hamburger.is-active span:nth-child(1) {
+    transform: translate(0px, -2px) rotate(45deg);
+}
+
+.hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+    transform: translate(15px);
+}
+
+.hamburger.is-active span:nth-child(3) {
+    transform: translate(-3px, 3px) rotate(-45deg);
+}
+
+
+.menu {
+    display: none;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block; 
+    padding: 00px 20px;
+}
+
+nav a {
+    color: var(--white);
+    transition: all 0.3s ease 0s;
+}
+
+nav a:hover {
+    color: var(--blue);
+    transition: all 0.3s ease 0s;
+}
+
+
+
+/* Add button if wanted
+
+button {
+    padding: 9px 25px;
+}
+*/
