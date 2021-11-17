@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import "./Header.css";
 
+import img from '../assets/logo.png';
+
 class Header extends Component {
 
   // Toggle the hamburger on button click 
@@ -19,6 +21,7 @@ class Header extends Component {
   render() {
     return (
       <header>
+          <img src={img} className="logo"/>
           <h1>On the Block</h1>
           <nav>
             <ul>
