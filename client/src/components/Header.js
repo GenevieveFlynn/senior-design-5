@@ -20,34 +20,29 @@ class Header extends Component {
 
   render() {
     return (
-      <header>
+      <div className="nav"> 
+
+        <div className="left">
           <img src={img} className="logo"/>
-          <h1>On the Block</h1>
-          <nav>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">My Contracts</a></li>
-              <li><a href="#">History</a></li>
-            </ul>
-          </nav>
-          <nav className="left-nav">
-            <ul>
-              <i className="fa fa-bell fa-lg" aria-hidden="true"><a href="#"></a></i>
-              <i className="fa fa-cog fa-lg" aria-hidden="true"><a href="#"></a></i>
-              <i className="fa fa-user-circle-o fa-2x" aria-hidden="true"><a href="#"></a></i>
-              <button className="login">Login</button>
-            </ul>
-          </nav>
+          <h2>On the Block</h2>
+        </div>
 
-          <button onClick={this.handleClickfa} className={this.state.isToggle ? "hamburger" : "hamburger in-action"}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+        <div className="middle">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Contracts</a></li>
+            <li><a href="#">History</a></li>
+          </ul>
+        </div>
 
-      </header>
+        <div className="right">
+          <i className="fa fa-bell fa-lg" aria-hidden="true"><a href="#"></a></i>
+          <i className="fa fa-cog fa-lg" aria-hidden="true"><a href="#"></a></i>
+          <i className="fa fa-user-circle-o fa-2x" aria-hidden="true"><a href="#"></a></i>
+        </div>
+      </div>
     );
-}
+  }
 };
 
 export default Header;
