@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
-import "./Header.css";
-
+import "../assets/header.css"
 import img from '../assets/logo.png';
 
 class Header extends Component {

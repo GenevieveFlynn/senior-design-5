@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import SimpleStorageContract from "./contracts/SimpleStorage.json";
 import getWeb3 from "./getWeb3";
-import Header from './components/Header'
+import Header from './components/header'
 
 import "./App.css";
+import Login from "./components/login";
 
 class App extends Component {
   state = { storageValue: 0, web3: null, accounts: null, contract: null, balances: null };
@@ -55,7 +56,8 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <Header></Header>
+        <Login></Login>
+        {/* <Header></Header> */}
       </div>
     );
   }
