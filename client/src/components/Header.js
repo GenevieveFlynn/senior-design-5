@@ -33,12 +33,6 @@ class Header extends Component {
             <li><a href="#">History</a></li>
           </ul>
         </div>
-
-        <div className="right">
-          <i className="fa fa-bell fa-lg" aria-hidden="true"><a href="#"></a></i>
-          <i className="fa fa-cog fa-lg" aria-hidden="true"><a href="#"></a></i>
-          <i className="fa fa-user-circle-o fa-2x" aria-hidden="true"><a href="#"></a></i>
-        </div>
       </div>
     );
   }
