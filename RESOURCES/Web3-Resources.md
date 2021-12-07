@@ -1,4 +1,4 @@
-### Web3 and Ethereum Querying Resources
+# Web3 and Ethereum Querying Resources
 
 ### Web3
 1. [Web3.js - Ethereum JavaScript API](https://web3js.readthedocs.io/en/v1.2.11/index.html) - web3.js is a collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket.
