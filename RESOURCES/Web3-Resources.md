@@ -4,6 +4,7 @@
 1. [Web3.js - Ethereum JavaScript API](https://web3js.readthedocs.io/en/v1.2.11/index.html) - web3.js is a collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket.
 2. [Getting Started](https://web3js.readthedocs.io/en/v1.2.11/getting-started.html)
 3. [Web3-eth](https://web3js.readthedocs.io/en/v1.2.11/web3-eth.html) - The web3-eth package allows you to interact with an Ethereum blockchain and Ethereum smart contracts.
+4. [Set Up Web3.js to Use the Ethereum Blockchain in Javascript](https://ethereum.org/en/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/)
 
 ### Querying Data in an Ethereum Blockchain
 [Read/Write to an Ethereum Blockchain using Smart Contracts](https://medium.com/coinmonks/querying-data-in-an-ethereum-blockchain-86289d3fc385) - Ethereum Blockchain functioning is fairly straightforward, the different storage space for permanent and temporary data in different tries ensures that data is safe and the data is easily manageable. Therefore, enabling access to the data stored on the Ethereum blockchain safe and easy.
