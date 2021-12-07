@@ -11,12 +11,5 @@
 9. [Dev Best Practices](https://yos.io/2019/11/10/smart-contract-development-best-practices/)
 10. [Smart Contracts in 2021: What It Is & Why It Matters?](https://research.aimultiple.com/smart-contracts/)
 11. [Real Estate Smart Contract](https://www2.deloitte.com/content/dam/Deloitte/nl/Documents/real-estate/deloitte-nl-fsi-re-blockchain-in-re.pdf)
-
-#### Smart Contracts
-Perhaps the best metaphor for a smart contract is a vending machine, as described by Nick Szabo. With the right inputs, a certain output is guaranteed.
-
-- Smart Contract = back-end API running in the blockchain
-- Dapp (Decentralized App) = front-end of the smart contract (visual application that allows the user to interact with the smart contract)
-
-#### Solidity
-A Smart Contract is deployed as byte code, but that does not imply you will have to write it that way. You will find various high-level languages in the community that compiles and converts your code to the EVM bytecode. The most popular one is Solidity. Solidity is an object-oriented and static language influenced by C++ or javascript.
+12. [Ethereum Privacy](https://docs.ethhub.io/ethereum-roadmap/privacy/)
+13. [Layer 2 Rollups](https://ethereum.org/en/developers/docs/scaling/layer-2-rollups/)
