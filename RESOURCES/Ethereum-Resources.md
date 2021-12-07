@@ -13,3 +13,6 @@
 11. [Real Estate Smart Contract](https://www2.deloitte.com/content/dam/Deloitte/nl/Documents/real-estate/deloitte-nl-fsi-re-blockchain-in-re.pdf)
 12. [Ethereum Privacy](https://docs.ethhub.io/ethereum-roadmap/privacy/)
 13. [Layer 2 Rollups](https://ethereum.org/en/developers/docs/scaling/layer-2-rollups/)
+14. [Ethereum Scaling](https://ethereum.org/en/developers/docs/scaling/)
+15. [Off-Chain Transactions](https://www.investopedia.com/terms/o/offchain-transactions-cryptocurrency.asp)
+16. [On-Chain vs. Off-Chain Transactions](https://learn.bybit.com/blockchain/off-chain-vs-on-chain-transactions/)
