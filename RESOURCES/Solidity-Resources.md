@@ -31,8 +31,10 @@ Got this graphic from 101blockchains.com at [Solidity Tutorial - 101 Blockchains
 - 2 Addresses - sender & receiver (these will be inputted by the landlord when setting up the smart contract)<br>
 `const senderAddress = "0x..."`<br>
 `const receiverAddress = "0x..."`<br>
-- Use balanceOf function to get the current amount at both addresses (
-- Call 
+- Use balance function to get the current amount at both addresses (`<address>.balance)
+- Use call function to receive the result of executing the function
+- Access instantiated smart contract methods through `yourContract.methods.methodname` (`contract.methods.methodname`)
+- Send to transfer the ether
   
 #### Special Variables and Functions
 **Variables**<br>
@@ -46,12 +48,13 @@ Got this graphic from 101blockchains.com at [Solidity Tutorial - 101 Blockchains
 `<address payable>.send(uint) returns (bool)` - send given amount of wei to address, returns false on failure, forwards 2300 gas stipend, not adjustable<br>
 `<address payable>.transfer(uint)` - send given amount of wei to address, reverts on failure, forwards 2300 gas stipend, not adjustable<br>
 `<address>.balance` - balance of the address in wei<br>
-`<address>.call(bytes) returns (bool, bytes)` - issue low-level call with the given payload, returns success condition and return data, forwards all available gas, adjustable<br>
+`<address>.call{value: someValue, gas: uint}(bytes) returns (bool, bytes)` - issue low-level call with the given payload, returns success condition and return data, forwards all available gas, adjustable<br>
 
 #### Solidity - Send vs. Transfer
 1. [Secure Ether Transfer](https://fravoll.github.io/solidity-patterns/secure_ether_transfer.html)
 2. [Sending Ether](https://solidity-by-example.org/sending-ether/)
 3. [Solidity - .send() vs .transfer()](https://vomtom.at/solidity-send-vs-transfer/)
+4. [Solidity Smart Contract Tutorial With Building Real-World Dapp — Part 4: Transfer, Send and Call](https://medium.com/coinmonks/solidity-smart-contract-tutorial-with-building-real-world-dapp-part-4-transfer-send-and-call-ea9d7386114c)
 
 You can send Ether to other contracts by:
 1. transfer (2300 gas, throws error)
@@ -67,6 +70,8 @@ An overview over the differences of the three methods is given in the following 
 | call.value  | all remaining gas (adjustable) | false on failure      |
 | transfer    | 2300 (not adjustable)          | throws on failure     |
 
+AS OF DECEMBER 2020: Recommended to use call() instead of transfer() or send()
+
 #### Contract Related
 `this` - the current contract, explicitly convertible to address<br>
 `selfdestruct(address payable)` - Destroy the current contract, sending its funds to the given Address and end execution.<br>
@@ -74,3 +79,8 @@ An overview over the differences of the three methods is given in the following 
 #### Error Handling
 `require(bool, string)` - Reverts if the condition is not met - to be used for errors in inputs or external components. Also provides an error message.<br>
 `assert` - Causes a Panic error and thus state change reversion if the condition is not met - to be used for internal errors.<br>
+`revert(string)` - abort execution and revert state changes, providing an explanatory string<br>
+
+#### Address vs. Address Payable
+The `address` and `address payable` types both store a 160-bit Ethereum address.<br>
+Simply speaking, an address payable can receive Ether, while a plain address cannot.<br>
