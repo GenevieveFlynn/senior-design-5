@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SimpleStorageContract from "./contracts/SimpleStorage.json";
+import RentalContract from "./contracts/RentalContract.json";
 import getWeb3 from "./getWeb3";
 
 import "./App.css";
@@ -17,9 +17,9 @@ class App extends Component {
 
       // Get the contract instance.
       const networkId = await web3.eth.net.getId();
-      const deployedNetwork = SimpleStorageContract.networks[networkId];
+      const deployedNetwork = RentalContract.networks[networkId];
       const instance = new web3.eth.Contract(
-        SimpleStorageContract.abi,
+        RentalContract.abi,
         deployedNetwork && deployedNetwork.address,
       );
 
@@ -41,7 +41,7 @@ class App extends Component {
     // Send money from one account to another account (transaction of money)
     // 1,000,000,000,000,000,000 Wei = 1 ETH 1 * 10^18 
     contract.methods.send_money(accounts[1]).send({from: accounts[0], value: 1000000000000000000 }).then((error, tranasctionHash)=>{alert(tranasctionHash);});
-    
+
     //const response = await contract.methods.get().call();
     //this.setState({ storageValue:this.state.web3.utils.hexToNumber(this.state.web3.utils.toHex(response))});
 
