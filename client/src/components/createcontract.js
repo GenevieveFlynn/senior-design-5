@@ -66,8 +66,8 @@ class CreateContract extends Component {
   handleSubmit(event) {
     // Try just sending money once on form submission and ignoring the number of months input
     if (this.state.contract) {
-      this.state.contract.methods.send_money(this.state.l_account_num).send({from: this.state.t_account_num, 
-      value: (1000000000000000000 * this.state.monthly_amount)}).then((error, tranasctionHash)=>{alert(tranasctionHash);});
+      this.state.contract.methods.send_money(this.state.l_account_num).send({from: this.state.t_account_num, value: (1000000000000000000 * this.state.monthly_amount)}).then((error, tranasctionHash)=>{alert(tranasctionHash);});
+      //contract.methods.send_money(accounts[1]).send({from: accounts[0], value: 1000000000000000000 }).then((error, tranasctionHash)=>{alert(tranasctionHash);});
 
       alert('A new contract was submitted! The landlord account number is '+ this.state.l_account_num + 
     ', the tenant account number is ' + this.state.t_account_num + ', the monthly payment amount is '

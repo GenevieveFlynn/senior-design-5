@@ -5,7 +5,7 @@ import Header from './components/Header'
 
 import "./App.css";
 import Login from "./components/login";
-import CreateContract from './components/CreateContract'
+import CreateContract from './components/createcontract'
 
 class App extends Component {
   /*state = { storageValue: 0, web3: null, accounts: null, contract: null, balances: null };
