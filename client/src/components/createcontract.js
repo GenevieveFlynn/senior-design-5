@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import SimpleStorageContract from "../contracts/SimpleStorage.json";
 import getWeb3 from "../getWeb3";
 
 import "../assets/CreateContract.css"
@@ -31,7 +32,7 @@ class CreateContract extends Component {
       // Use web3 to get the user's accounts.
       const accounts = await web3.eth.getAccounts();
 
-      /*// Get the contract instance.
+      // Get the contract instance.
       const networkId = await web3.eth.net.getId();
       const deployedNetwork = SimpleStorageContract.networks[networkId];
       const instance = new web3.eth.Contract(
@@ -41,7 +42,7 @@ class CreateContract extends Component {
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance, balances: new Array(10)}, this.runExample);*/
+      this.setState({ web3, accounts, contract: instance, balances: new Array(10)}, this.runExample);
     } 
     catch (error) {
       // Catch any errors for any of the above operations.
@@ -63,9 +64,19 @@ class CreateContract extends Component {
   }
 
   handleSubmit(event) {
-    alert('A new contract was submitted! The landlord account number is '+ this.state.l_account_num + 
+    // Try just sending money once on form submission and ignoring the number of months input
+    if (this.state.contract) {
+      this.state.contract.methods.send_money(this.state.l_account_num).send({from: this.state.t_account_num, 
+      value: (1000000000000000000 * this.state.monthly_amount)}).then((error, tranasctionHash)=>{alert(tranasctionHash);});
+
+      alert('A new contract was submitted! The landlord account number is '+ this.state.l_account_num + 
     ', the tenant account number is ' + this.state.t_account_num + ', the monthly payment amount is '
      + this.state.monthly_amount + ', and the number of months is ' + this.state.num_months + '.');
+    }
+    else {
+      alert('Contracts was null.');
+    }
+
     event.preventDefault();
   }
 
@@ -74,10 +85,6 @@ class CreateContract extends Component {
     return (
         <form onSubmit={this.handleSubmit}>
             <h1> New Contract </h1>
-            <label>{this.state.l_account_num}</label>
-            <label>{this.state.t_account_num}</label>
-            <label>{this.state.monthly_amount}</label>
-            <label>{this.state.num_months}</label>
             <input type="text" placeholder="Landlord account number" name="l_account_num" onChange={this.handleInputChange}></input>
             <input type="text" placeholder="Tenant account number" name="t_account_num" onChange={this.handleInputChange}></input>
             <input type="text" placeholder="Monthly Amount" name="monthly_amount" onChange={this.handleInputChange}></input>

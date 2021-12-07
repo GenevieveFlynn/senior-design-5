@@ -8,7 +8,7 @@ import Login from "./components/login";
 import CreateContract from './components/CreateContract'
 
 class App extends Component {
-  state = { storageValue: 0, web3: null, accounts: null, contract: null, balances: null };
+  /*state = { storageValue: 0, web3: null, accounts: null, contract: null, balances: null };
 
   componentDidMount = async () => {
     try {
@@ -36,7 +36,7 @@ class App extends Component {
       );
       console.error(error);
     }
-  };
+  };*/
 
   runExample = async () => {
     const { accounts, contract } = this.state;
@@ -52,9 +52,9 @@ class App extends Component {
 
   // Front end website
   render() {
-    if (!this.state.web3) {
+    /*if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
-    }
+    }*/
     return (
       <div className="App">
         <Header></Header>
