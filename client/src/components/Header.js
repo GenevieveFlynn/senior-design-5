@@ -33,6 +33,9 @@ class Header extends Component {
             <li><a href="#">History</a></li>
           </ul>
         </div>
+        <div className="right">
+          <button className="login">Login</button>
+        </div>
       </div>
     );
   }
