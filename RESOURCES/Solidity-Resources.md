@@ -10,9 +10,10 @@
 8. [Smart Contracts Examples and Use Cases](https://existek.com/blog/what-are-smart-contracts-examples-and-use-cases/)
 
 ### Solidity
-A Smart Contract is deployed as byte code, but that does not imply you will have to write it that way. You will find various high-level languages in the community that compiles and converts your code to the EVM bytecode. The most popular one is Solidity. Solidity is an object-oriented and static language influenced by C++ or Javascript.
+A Smart Contract is deployed as byte code, but that does not imply you will have to write it that way. You will find various high-level languages in the community that compiles and converts your code to the EVM bytecode. The most popular one is Solidity. Solidity is an object-oriented, static, high-level language for implementing smart contracts, influenced by C++ and Javascript.
 
 ### Smart Contracts
+Smart contracts are programs which govern the behaviour of accounts within the Ethereum state.<br>
 Perhaps the best metaphor for a smart contract is a vending machine, as described by Nick Szabo. With the right inputs, a certain output is guaranteed.
 - Smart Contract = back-end API running in the blockchain
 - Dapp (Decentralized App) = front-end of the smart contract (visual application that allows the user to interact with the smart contract)
