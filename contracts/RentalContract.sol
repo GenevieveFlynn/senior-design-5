@@ -10,9 +10,9 @@ contract RentalContract {
     }
 
     // Send money from one account to another account (transaction of money)  
-    function send_money(address payable _To) public payable returns (bool) {
+    function payRent(address payable _To) public payable {
         _To.transfer(msg.value);
-        return true;
+        // _To.call{value: msg.value, gas: 2300}(abi.encodeWithSignature(signatureString, arg);) returns (bool, bytes);
     }
 
     // Upon start of new contract, initiate the start of monthly recurring payments
