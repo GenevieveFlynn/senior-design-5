@@ -43,6 +43,7 @@ Got this graphic from 101blockchains.com at [Solidity Tutorial - 101 Blockchains
   
 #### Storage, Mappings, and Dynamic Arrays
 [Layout in Storage](https://docs.soliditylang.org/en/v0.8.10/internals/layout_in_storage.html)
+[Solidity's Four Types of Data Locations](https://www.c-sharpcorner.com/article/storage-and-memory-data-locations/)
 
 #### Special Variables and Functions
 **Variables**<br>
