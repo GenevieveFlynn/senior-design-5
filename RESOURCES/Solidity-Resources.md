@@ -36,7 +36,14 @@ Got this graphic from 101blockchains.com at [Solidity Tutorial - 101 Blockchains
 - Use call function to receive the result of executing the function
 - Access instantiated smart contract methods through `yourContract.methods.methodname` (`contract.methods.methodname`)
 - Send to transfer the ether
+
+#### Structs
+[Structure of a Contract](https://docs.soliditylang.org/en/v0.8.10/structure-of-a-contract.html)
+[Structs - Types](https://docs.soliditylang.org/en/v0.8.10/types.html#structs)
   
+#### Storage, Mappings, and Dynamic Arrays
+[Layout in Storage](https://docs.soliditylang.org/en/v0.8.10/internals/layout_in_storage.html)
+
 #### Special Variables and Functions
 **Variables**<br>
 `block.number` - current block number<br>
