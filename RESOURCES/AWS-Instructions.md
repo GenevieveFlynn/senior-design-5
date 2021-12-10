@@ -1,4 +1,4 @@
-# AWS Resources
+# AWS Instructions
 
 ### Databases Instructions (from Bhagi)<br>
 EC2 Ubuntu 18.04 LAMP Server Instructions<br>
