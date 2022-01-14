@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import SimpleStorageContract from "./contracts/SimpleStorage.json";
 import getWeb3 from "./getWeb3";
-import Header from './components/header'
+import Header from './components/Header'
 
 import "./App.css";
 import Login from "./components/login";
+import CreateContract from './components/createcontract'
 
 class App extends Component {
-  state = { storageValue: 0, web3: null, accounts: null, contract: null, balances: null };
+  /*state = { storageValue: 0, web3: null, accounts: null, contract: null, balances: null };
 
   componentDidMount = async () => {
     try {
@@ -35,7 +36,7 @@ class App extends Component {
       );
       console.error(error);
     }
-  };
+  };*/
 
   runExample = async () => {
     const { accounts, contract } = this.state;
@@ -51,13 +52,14 @@ class App extends Component {
 
   // Front end website
   render() {
-    if (!this.state.web3) {
+    /*if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
-    }
+    }*/
     return (
       <div className="App">
-        {/* <Login></Login> */}
+
         <Header></Header>
+        <CreateContract></CreateContract>
       </div>
     );
   }
