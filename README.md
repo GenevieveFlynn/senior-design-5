@@ -22,7 +22,7 @@ instance identifier: `ontheblock`<br>
 db name: `ontheblock_db`<br>
 username: `admin`<br>
 password: `admin123`<br>
-endpoint: [ontheblock.ccwnfrrgigph.us-east-1.rds.amazonaws.com](ontheblock.ccwnfrrgigph.us-east-1.rds.amazonaws.com)<br>
+endpoint: ontheblock.ccwnfrrgigph.us-east-1.rds.amazonaws.com<br>
 port: 3306<br>
 
 [Steps to Setup and Connect MySQL DB RDS Instance](https://aws.amazon.com/getting-started/hands-on/create-mysql-db/)<br>
