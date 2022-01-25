@@ -15,7 +15,7 @@ Architecture Design Document 2 - TO DO<br>
 
 ### AWS EC2 Instance
 `chmod 700 katiebramlett.pem`<br>
-`ssh -i katiebramlett.pem ubuntu@52.202.135.255`<br>
+`ssh -i katiebramlett.pem ubuntu@52.202.135.255` OR `ssh -i katiebramlett.pem ubuntu@ec2-52-202-135-255.compute-1.amazonaws.com`<br>
 (.pem file located in Google Drive folder for Team 5)<br>
 
 ### AWS RDS Instance
