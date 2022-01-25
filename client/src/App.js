@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import RentalContract from "./contracts/RentalContract.json";
 import getWeb3 from "./getWeb3";
+import Header from './components/Header'
 
 import "./App.css";
+import Login from "./components/login";
+import CreateContract from './components/createcontract'
 
 class App extends Component {
-  state = { storageValue: 0, web3: null, accounts: null, contract: null, balances: null };
+  /*state = { storageValue: 0, web3: null, accounts: null, contract: null, balances: null };
 
   componentDidMount = async () => {
     try {
@@ -33,14 +36,14 @@ class App extends Component {
       );
       console.error(error);
     }
-  };
+  };*/
 
   runExample = async () => {
     const { accounts, contract } = this.state;
 
     // Send money from one account to another account (transaction of money)
     // 1,000,000,000,000,000,000 Wei = 1 ETH 1 * 10^18 
-    contract.methods.payRent(accounts[1]).send({from: accounts[0], value: 1000000000000000000 }).then((error, tranasctionHash)=>{alert(tranasctionHash);});
+    // contract.methods.payRent(accounts[1]).send({from: accounts[0], value: 1000000000000000000 }).then((error, tranasctionHash)=>{alert(tranasctionHash);});
 
     //const response = await contract.methods.get().call();
     //this.setState({ storageValue:this.state.web3.utils.hexToNumber(this.state.web3.utils.toHex(response))});
@@ -49,14 +52,13 @@ class App extends Component {
 
   // Front end website
   render() {
-    if (!this.state.web3) {
+    /*if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
-    }
+    }*/
     return (
       <div className="App">
-        <h2>Smart Contract Example</h2>
-        <div>Account 0: {this.state.accounts[0]} </div>
-        <div>Account 1: {this.state.accounts[1]} </div>
+        <Header></Header>
+        <CreateContract></CreateContract>
       </div>
     );
   }
