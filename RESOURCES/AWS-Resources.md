@@ -1,5 +1,7 @@
 # AWS Resources
 
+[How To Install Linux, Apache, MySQL, PHP (LAMP) stack on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04)
+
 ### Databases Instructions (from Bhagi)<br>
 EC2 Ubuntu 18.04 LAMP Server Instructions<br>
 
