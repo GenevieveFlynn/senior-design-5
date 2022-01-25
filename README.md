@@ -23,4 +23,5 @@ db name: `ontheblock_db`<br>
 username: `admin`<br>
 password: `admin123`<br>
 
-[Steps to Setup and Connect MySQL DB RDS Instance](https://aws.amazon.com/getting-started/hands-on/create-mysql-db/)
+[Steps to Setup and Connect MySQL DB RDS Instance](https://aws.amazon.com/getting-started/hands-on/create-mysql-db/)<br>
+[How to Setup RDS and Connect with EC2 in AWS](https://www.cloudbooklet.com/how-to-setup-rds-and-connect-with-ec2-in-aws/#:~:text=Configure%20RDS%20to%20allow%20connections,assigned%20to%20your%20RDS%20instance)<br>
