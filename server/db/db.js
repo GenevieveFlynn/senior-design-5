@@ -1,17 +1,12 @@
 var config = require('../config');
-var mysql = require('mysql2');
+var mysql = require('mysql2/promise');
 
-var conn = mysql.createConnection({
+var pool = mysql.createPool({
     host: config.HOST,
     user: config.USER,
     password: config.PASSWORD
 });
 
-conn.connect(function(err) {
-    if (err) throw err; 
-    console.log("Connected to on-the-block-db!");
-});
-
 module.exports = {
-    conn
+    pool
 }

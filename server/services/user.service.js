@@ -1,6 +1,15 @@
 // business layer abstraction between DB and client calls 
 
-const { createUserDB, addUserWalletDB }  = require("../db/user.db");
+const { createUserDB, addUserWalletDB, getWalletDB }  = require("../db/user.db");
+
+const getWallet = async(userID) => {
+    try {
+        return getWalletDB(userID);
+    } catch(e) {
+        throw new Error(e.message);
+    }
+};
+
 
 const createUser = async(firstname, lastname, username, password, role) => {
     try {
@@ -19,6 +28,7 @@ const addUserWallet = async(userid, walletaddr) => {
 };
 
 module.exports = {
+    getWallet,
     createUser,
     addUserWallet
 };

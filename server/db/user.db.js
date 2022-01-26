@@ -1,30 +1,44 @@
-const { conn } = require('./db')
+const { pool } = require('./db')
 
-// contains the queries to the database 
+const {promisfy }= require('promisfy')
+
+// GET queries 
+const getWalletDB = async(userID) => {
+    try {
+        const query = 'SELECT walletaddr FROM ontheblock_db.wallets WHERE userID = ?'
+        const result = await pool.query(query, [userID])
+
+        return result[0]
+    } catch (e) {
+        console.log(e.message)
+        next()
+    } 
+}
+
+// POST queries  
 
 const createUserDB = async(firstname, lastname, username, password, role) => {
-
-    const query = 'INSERT INTO ontheblock_db.users (firstname, lastname, username, password, role) VALUES (?, ?, ?, ?, ?)';
-
     try {
-        return await conn.execute(query, [firstname, lastname, username, password, role]);
+        const query = 'INSERT INTO ontheblock_db.users (firstname, lastname, username, password, role) VALUES (?, ?, ?, ?, ?)';
+        return await pool.query(query, [firstname, lastname, username, password, role])
     } catch(e) {
-        throw new Error(e.message);
+        console.log(e.message)
+        next()
     }
-};
+}
 
 const addUserWalletDB = async(userid, walletaddr) => {
-
-    const query = 'INSERT INTO ontheblock_db.wallets (userID, walletaddr) VALUES (?, ?)';
-
     try {
-        return await conn.execute(query, [userid, walletaddr]);
+        const query = 'INSERT INTO ontheblock_db.wallets (userID, walletaddr) VALUES (?, ?)';
+        return await pool.query(query, [userid, walletaddr]);
     } catch(e) {
-        throw new Error(e.message);
+        console.log(e.message)
+        next()
     }
 };
 
 module.exports = {
+    getWalletDB,
     createUserDB,
     addUserWalletDB
 };
