@@ -13,6 +13,18 @@ const createUserDB = async(firstname, lastname, username, password, role) => {
     }
 };
 
+const addUserWalletDB = async(userid, walletaddr) => {
+
+    const query = 'INSERT INTO ontheblock_db.wallets (userID, walletaddr) VALUES (?, ?)';
+
+    try {
+        return await conn.execute(query, [userid, walletaddr]);
+    } catch(e) {
+        throw new Error(e.message);
+    }
+};
+
 module.exports = {
-    createUserDB
+    createUserDB,
+    addUserWalletDB
 };

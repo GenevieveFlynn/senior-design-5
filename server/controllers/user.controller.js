@@ -1,4 +1,4 @@
-const { createUser } = require('../services/user.service');
+const { createUser, addUserWallet } = require('../services/user.service');
 
 // create a new user to insert into the database
 const postUser = async (req, res, next) => {
@@ -15,9 +15,24 @@ const postUser = async (req, res, next) => {
     }
 };
 
+// create a new user to insert into the database
+const postWallet = async (req, res, next) => {
+
+    try {
+        const user = await addUserWallet(req.params.userid, req.params.walletaddr);
+        return res.status(201);
+        
+    } catch(e) {
+        console.log(e.message);
+        res.sendStatus(500) & next(error);
+        next();
+    }
+};
+
 // export functions used
 module.exports = {
-    postUser
+    postUser,
+    postWallet
 }
 
 
