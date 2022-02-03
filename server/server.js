@@ -1,7 +1,7 @@
 const express = require('express')
-const app = express()
 const bodyParser = require('body-parser')
-const cors = require("cors");
+const app = express()
+const cors = require('cors');
 
 app.use(cors())
 
@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 const router = require('./routes/routes')
 
-var PORT = process.env.port || 3000
+var PORT = process.env.port || 8081
 
 app.listen(PORT, function(error){
     if (error) throw error
@@ -21,3 +21,14 @@ app.listen(PORT, function(error){
 app.use('/', router);
 
 module.exports = app;
+
+/* 
+
+    Can add custom error handler here if desired 
+    app.use(errorHandler)
+
+    static errorHandler(error, req, res, next) {
+        // custom logic here 
+        res.send(500) --> internal server error
+    }
+*/

@@ -1,15 +1,32 @@
-// business layer abstraction between DB and client calls 
+// business layer abstraction between DB and client calls
 
-const { createUserDB, addUserWalletDB, getWalletDB }  = require("../db/user.db");
+const { createPoolCluster } = require("mysql2");
+const { loginDB, createUserDB, addUserWalletDB, getWalletDB }  = require("../db/user.db");
 
-const getWallet = async(userID) => {
+const verifyLogin = async(username, password) => {
     try {
-        return getWalletDB(userID);
+        const auth = await loginDB(username)
+
+        if (password != auth[0].password) {
+            throw new Error('Invalid login credentials')
+        }
+
+        /* otherwise we would return the auth token */
+        return auth[0].userID
     } catch(e) {
-        throw new Error(e.message);
+
+        // instead of throwing e we can do next(e)
+        throw new Error(e.message)
     }
 };
 
+const getWallet = async(userID) => {
+    try {
+        return await getWalletDB(userID)
+    } catch(e) {
+        throw new Error(e.message)
+    }
+};
 
 const createUser = async(firstname, lastname, username, password, role) => {
     try {
@@ -28,6 +45,7 @@ const addUserWallet = async(userid, walletaddr) => {
 };
 
 module.exports = {
+    verifyLogin,
     getWallet,
     createUser,
     addUserWallet

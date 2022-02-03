@@ -1,8 +1,18 @@
 const { pool } = require('./db')
 
-const {promisfy }= require('promisfy')
-
 // GET queries 
+const loginDB = async(username) => {
+    try {
+        const query = 'SELECT userID, password FROM ontheblock_db.users WHERE username=?'
+        const result = await pool.query(query, [username])
+        
+        return result[0]
+    } catch(e) {
+        console.log(e.message)
+        throw(e)
+    }
+}
+
 const getWalletDB = async(userID) => {
     try {
         const query = 'SELECT walletaddr FROM ontheblock_db.wallets WHERE userID = ?'
@@ -11,7 +21,7 @@ const getWalletDB = async(userID) => {
         return result[0]
     } catch (e) {
         console.log(e.message)
-        next()
+        throw(e)
     } 
 }
 
@@ -23,7 +33,7 @@ const createUserDB = async(firstname, lastname, username, password, role) => {
         return await pool.query(query, [firstname, lastname, username, password, role])
     } catch(e) {
         console.log(e.message)
-        next()
+        throw(e)
     }
 }
 
@@ -33,11 +43,12 @@ const addUserWalletDB = async(userid, walletaddr) => {
         return await pool.query(query, [userid, walletaddr]);
     } catch(e) {
         console.log(e.message)
-        next()
+        throw(e)
     }
 };
 
 module.exports = {
+    loginDB,
     getWalletDB,
     createUserDB,
     addUserWalletDB

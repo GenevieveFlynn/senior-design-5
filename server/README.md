@@ -6,6 +6,8 @@ Server.js starts up the server to run on localhost:3000 to listen for API calls.
 
 Routes.js maps the paths to function calls in the controller folder which calls functions in the services folder. The services functions call the functions in the DB folder which makes the queries to the database, the returns then get returned up the call stack. 
 
+To test the API, I recommend installing postman. 
+
 Resources I used to create this:
 - https://sodocumentation.net/node-js/topic/10785/route-controller-service-structure-for-expressjs
 
